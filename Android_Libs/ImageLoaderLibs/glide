@@ -1,0 +1,13 @@
+bumptech/Glide
+https://github.com/bumptech/glide.git
+
+根据glide的自述文档，作为一款图片加载Library,功能主要包括媒体解码，内存和磁盘缓存，以及维护一个资源池。
+glide支持获取，解码以及展示video stills(并不知道指的是什么)，图片，和gif。
+同时支持不同的网络模块，默认使用HttpUrlConnection,接入OkHttp和Volley也很容易。
+glide自述想达到的目的则是使得任何图片的滑动都尽量地顺畅和快速。当然做其他的工作也很合适。
+
+接入的话（我实测过），按照他们家文档说的就行，当然还是用android studio比较容易。
+
+另外也需要编译sdk的版本达到19以上，原因是需要用到Bitmap.getAllocationByteCount()方法。
+
+
