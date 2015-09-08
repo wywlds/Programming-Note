@@ -1,0 +1,8 @@
+#1 WeakReference & SoftReference
+ WeakReference， 即弱引用，意思是这种引用在GC时完全不会阻止回收。
+ SoftReference， 即软引用，也不会阻止回收，但是GC时只会在内存不足，马上要抛OutOfMemoryError的时候才会回收。
+WeakHashMap,使用起来和普通的HashMap一样，但是允许GC自动清理键值对
+
+#2 volatile 关键字
+使用volatile关键字，会获得原子性。保证对这个域产生的写操作之后，所有的读操作都可以看到该修改。写操作比不加volatile关键字的域更耗资源，而读操作和普通的域消耗的资源差不多。
+
