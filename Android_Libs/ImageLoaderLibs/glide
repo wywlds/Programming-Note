@@ -76,6 +76,9 @@ glide自述想达到的目的则是使得任何图片的滑动都尽量地顺畅
 	$2 然后在GlideModule的实现中的registerComponents方法中加上：
 		registry.replace(GlideUrl.class, InputStream.class, new VolleyUrlLoader.Factory(context));
 
+这里的VolleyUrlLoader的代码可以从glide的release界面下载到，下载后直接copy进入工程。但是在我们自己的工程里面如果已经有过RequestQueue了，那么就可以直接改代码拿到RequestQueue的单例，这样可以防止多个RequestQueue实例造成崩溃。
+
+volley适用于小数据量且频繁的网络请求，支持多线程，也支持优先级排序。但是对于大数据量的请求
 
 特殊的Api:
 	$1 downloadOnly(int, int),会下载图片并且存储在本地。使用：
