@@ -4,7 +4,7 @@
 
 2. DroidPlugin需要做初始化，采取的接口是在Application的onCreate和attachBaseContext方法中添加代码：
 
-`	@Override
+```	@Override
 	public void onCreate() {
 		super.onCreate;
 		PluginHelper.getInstance().applicationOnCreate(getBaseContext());
@@ -14,7 +14,7 @@
 	protected void attachBaseContext(Context base) {
 		PluginHelper.getInstance().applicationAttachBaseContext(base);
 	}
-`
+```
 
 3. 将插件中`AndroidManifest.xml`中所有的`provider`对应的`authorities`修改成自己的。目的是防止和其他使用该插件的app冲突。
 
