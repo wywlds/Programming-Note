@@ -3,7 +3,6 @@
 1. 首先将DroidPlugin当作一个lib工程应用到主项目中，也可以将DroidPlugin打包成.aar，然后给相应的工程接入。
 
 2. DroidPlugin需要做初始化，采取的接口是在Application的onCreate和attachBaseContext方法中添加代码：
-
 ```	@Override
 	public void onCreate() {
 		super.onCreate;
